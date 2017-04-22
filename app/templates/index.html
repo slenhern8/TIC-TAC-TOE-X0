@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../static/favicon_x0.ico"/>
+</head>
+<body bgcolor="#AEB6BF">
+<h1 style="text-align: center;"> Tu Turno</h1>
+<form action="http://localhost:5000/" method="GET">
+        <p> <input type="submit" VALUE="JUEGO NUEVO"></p>
+</form>
+    <p style="text-align: center;"></p>
+<table style="height: 500px; border-color: #000000;background-color:#FFFFFF ; margin-left: auto; margin-right: auto;" border="10" width="500">
+        <caption>&nbsp;</caption>
+<tbody>
+    <tr>
+        <td style="text-align: center;">&nbsp;{% if p1 == 1 %}
+            <form method="POST" action="http://localhost:5000/jugada">
+                <input name="posicion" type="image" value="1"
+                src="../static/blanco.png">
+            </form>
+            {% else %}
+                {% if p1 == 'x' %}
+            <img src="../static/X_2.png" />
+                {% else %}
+            <img src="../static/O.png" />
+            {% endif %}
+            {% endif %}
+        </td>
+        <td style="text-align: center;">&nbsp;{% if p2 == 2 %}
+            <form method="POST" action="http://localhost:5000/jugada">
+                <input name="posicion" type="image" value="2"
+                src="../static/blanco.png">
+            </form>
+            {% else %}
+                {% if p2 == 'x' %}
+            <img src="../static/X_2.png" />
+                {% else %}
+            <img src="../static/O.png" />
+            {% endif %}
+            {% endif %}
+        </td>
+        <td style="text-align: center;">&nbsp;{% if p3 == 3 %}
+            <form method="POST" action="http://localhost:5000/jugada">
+                <input name="posicion" type="image" value="3"
+                src="../static/blanco.png">
+            </form>
+            {% else %}
+                {% if p3 == 'x' %}
+            <img src="../static/X_2.png" />
+                {% else %}
+            <img src="../static/O.png" />
+            {% endif %}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">&nbsp;{% if p4 == 4 %}
+            <form method="POST" action="http://localhost:5000/jugada">
+                <input name="posicion" type="image" value="4"
+                src="../static/blanco.png">
+            </form>
+            {% else %}
+                {% if p4 == 'x' %}
+            <img src="../static/X_2.png" />
+                {% else %}
+            <img src="../static/O.png" />
+            {% endif %}
+            {% endif %}
+        </td>
+        <td style="text-align: center;">&nbsp;{% if p5 == 5 %}
+            <form method="POST" action="http://localhost:5000/jugada">
+                <input name="posicion" type="image" value="5"
+                src="../static/blanco.png">
+            </form>
+            {% else %}
+                {% if p5 == 'x' %}
+            <img src="../static/X_2.png" />
+                {% else %}
+            <img src="../static/O.png" />
+            {% endif %}
+            {% endif %}
+        </td>
+        <td style="text-align: center;">&nbsp;{% if p6 == 6 %}
+            <form method="POST" action="http://localhost:5000/jugada">
+                <input name="posicion" type="image" value="6"
+                src="../static/blanco.png">
+            </form>
+            {% else %}
+                {% if p6 == 'x' %}
+            <img src="../static/X_2.png" />
+                {% else %}
+            <img src="../static/O.png" />
+            {% endif %}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">&nbsp;{% if p7 == 7 %}
+            <form method="POST" action="http://localhost:5000/jugada">
+                <input name="posicion" type="image" value="7"
+                src="../static/blanco.png">
+            </form>
+            {% else %}
+                {% if p7 == 'x' %}
+            <img src="../static/X_2.png" />
+                {% else %}
+            <img src="../static/O.png" />
+            {% endif %}
+            {% endif %}</td>
+        <td style="text-align: center;">&nbsp;{% if p8 == 8 %}
+            <form method="POST" action="http://localhost:5000/jugada">
+                <input name="posicion" type="image" value="8"
+                src="../static/blanco.png">
+            </form>
+            {% else %}
+                {% if p8 == 'x' %}
+            <img src="../static/X_2.png" />
+                {% else %}
+            <img src="../static/O.png" />
+            {% endif %}
+            {% endif %}</td>
+        <td style="text-align: center;">&nbsp; {% if p9 == 9 %}
+            <form method="POST" action="http://localhost:5000/jugada">
+                <input name="posicion" type="image" value="9"
+                src="../static/blanco.png">
+            </form>
+            {% else %}
+                {% if p9 == 'x' %}
+            <img src="../static/X_2.png" />
+                {% else %}
+            <img src="../static/O.png" />
+            {% endif %}
+            {% endif %}
+        </td>
+    </tr>
+</tbody>
+</table>
+
+<table style="border-color: #f4d03f; background-color: #ffffff; margin-left: auto; margin-right: auto;" border="3"><caption>
+<h3>&nbsp;Marcadores:</h3>
+</caption>
+<tbody>
+<tr>
+<td>&nbsp;Jugador (X)</td>
+<td>&nbsp;Empates</td>
+<td>&nbsp;Computadora (0)</td>
+</tr>
+<tr>
+<td>&nbsp;{{gx}}</td>
+<td>&nbsp;{{em}}</td>
+<td>&nbsp;{{g0}}</td>
+</tr>
+</tbody>
+</table>
+</body>
+
+
